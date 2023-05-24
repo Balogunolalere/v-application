@@ -723,7 +723,7 @@ const Content = () => {
                 <div className='mb-6 mt-11 flex flex-col'>
                     <h2 className='text-lg font-semibold mb-2'>Give details about 2 of your parents</h2>
                 </div>
-                <div className='mb-6 mt-4 flex flex-col'>
+                <div className='mb-6 flex flex-col'>
                     <h2 className='text-lg font-semibold mb-2'>Mother</h2>
                 </div>
                 <div className='mb-6 flex flex-col'>
@@ -990,7 +990,7 @@ const Content = () => {
                         <option value='no'>No</option>
                     </select>
                 </div>
-                <div className='mb-6 mt-4 flex flex-col'>
+                <div className='mb-6 flex flex-col'>
                     <h2 className='text-lg font-semibold mb-2'>Father</h2>
                 </div>
                 <div className='mb-6 flex flex-col'>
@@ -1717,10 +1717,10 @@ const Content = () => {
                         </tbody>
                     </table>
                 </div> */}
-                <div className='mb-6 mt-4 flex flex-col'>
+                <div className='mb-6 flex flex-col'>
                     <h2 className='text-lg font-semibold mb-2'>For either the UK or any other country, have you ever been...</h2>
                 </div>
-                <div className='flex flex-col'>
+                <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Refused a visa</label>
                     <select className='h-11 border rounded bg-[#F6F6F6]'>
                         <option value='yes'>Yes</option>
@@ -1728,7 +1728,7 @@ const Content = () => {
                     </select>
                 </div>
 
-                <div className='flex flex-col'>
+                <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Refused entry at the border</label>
                     <select className='h-11 border rounded bg-[#F6F6F6]'>
                         <option value='yes'>Yes</option>
@@ -1736,7 +1736,7 @@ const Content = () => {
                     </select>
                 </div>
 
-                <div className='flex flex-col'>
+                <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Refused permission to stay or remain</label>
                     <select className='h-11 border rounded bg-[#F6F6F6]'>
                         <option value='yes'>Yes</option>
@@ -1744,7 +1744,7 @@ const Content = () => {
                     </select>
                 </div>
 
-                <div className='flex flex-col'>
+                <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Refused asylum</label>
                     <select className='h-11 border rounded bg-[#F6F6F6]'>
                         <option value='yes'>Yes</option>
@@ -1752,7 +1752,7 @@ const Content = () => {
                     </select>
                 </div>
 
-                <div className='flex flex-col'>
+                <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Deported</label>
                     <select className='h-11 border rounded bg-[#F6F6F6]'>
                         <option value='yes'>Yes</option>
@@ -1760,7 +1760,7 @@ const Content = () => {
                     </select>
                 </div>
 
-                <div className='flex flex-col'>
+                <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Removed</label>
                     <select className='h-11 border rounded bg-[#F6F6F6]'>
                         <option value='yes'>Yes</option>
@@ -1768,7 +1768,7 @@ const Content = () => {
                     </select>
                 </div>
 
-                <div className='flex flex-col'>
+                <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Required to leave</label>
                     <select className='h-11 border rounded bg-[#F6F6F6]'>
                         <option value='yes'>Yes</option>
@@ -1776,7 +1776,7 @@ const Content = () => {
                     </select>
                 </div>
 
-                <div className='flex flex-col'>
+                <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Excluded or banned from entry</label>
                     <select className='h-11 border rounded bg-[#F6F6F6]'>
                         <option value='yes'>Yes</option>
@@ -1784,7 +1784,7 @@ const Content = () => {
                     </select>
                 </div>
 
-                <div className='flex flex-col'>
+                <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Give details of what happened </label>
                     <select className='h-11 border rounded bg-[#F6F6F6]'>
                         <option value="refused a visa">Refused a visa</option>
@@ -1798,7 +1798,7 @@ const Content = () => {
                     </select>
                 </div>
 
-                <div className='flex flex-col'>
+                <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Name of Country</label>
                     <select className='h-11 border rounded bg-[#F6F6F6]'>
                         <option value="Afghanistan">Afghanistan</option>
@@ -2047,12 +2047,12 @@ const Content = () => {
                         <option value="Zimbabwe">Zimbabwe</option>
                     </select>
                 </div>
-                <div className='flex flex-col'>
+                <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>When did this immigration problem happen?</label>
                     <input type='date' className='h-11 border rounded bg-[#F6F6F6]' />
                 </div>
 
-                <div className='flex flex-col'>
+                <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Give more details of what happened</label>
                     <textarea className='h-24 border rounded bg-[#F6F6F6]' />
                 </div>
