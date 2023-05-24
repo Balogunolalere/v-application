@@ -2053,7 +2053,7 @@ const Content = () => {
                 </div>
 
                 <div className='flex flex-col'>
-                    <label className='text-sm font-semibold mb-2'>103. Give more details of what happened</label>
+                    <label className='text-sm font-semibold mb-2'>Give more details of what happened</label>
                     <textarea className='h-24 border rounded bg-[#F6F6F6]' />
                 </div>
             </form>
