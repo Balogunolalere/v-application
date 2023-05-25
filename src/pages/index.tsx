@@ -12,7 +12,7 @@ export default function Home() {
           }`}
       >
         <Header />
-        <Timeline />
+        {/* <Timeline /> */}
         <Content />
       </div>
     </main>
