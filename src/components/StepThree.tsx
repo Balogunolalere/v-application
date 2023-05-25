@@ -1,7 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+import React, { useState } from 'react';
+
 
 const StepOne = () => {
+    const [data, setData] = useState<any>({
+        dependentDateOfBirth: '', dependentResidence: '', dependentTravel: '', parent1GivenNamesandFamilyNames: '', parent1DateOfBirth: '', parent1Nationality: '', dependentSameNationality: '', parent2GivenNamesandFamilyNames: '', parent2DateOfBirth: '', parent2Nationality: '', parent2SameNationality: '', hasFamilyInUK: '', familyRelationship: '', familyName: '', familyNationality: '', familyPermissionToUK: '', familyPassportNumber: '' 
+    });
+    
     return (
         <section className='p-6'>
             <h1 className='text-lg font-bold'>Travelers Details</h1>
@@ -10,15 +15,15 @@ const StepOne = () => {
             <form className='mt-6'>
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Date of birth of your dependent</label>
-                    <input type='date' className='h-11 border rounded bg-[#F6F6F6]' />
+                    <input type='date' name='dependentDateOfBirth' value={data.dependentDateOfBirth} className='h-11 border rounded bg-[#F6F6F6]' />
                 </div>
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Does this person currently live with you? If "No," state address and details of where he/she stays</label>
-                    <textarea className='h-24 border rounded bg-[#F6F6F6]'></textarea>
+                    <textarea name='dependentResidence' value={data.dependentResidence} className='h-11 border rounded bg-[#F6F6F6]' />
                 </div>
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Is this person travelling with you to the UK? If "Yes," Country of Nationality and Passport Number?</label>
-                    <input className='h-11 border rounded bg-[#F6F6F6]' />
+                    <input name='dependentTravel' value={data.dependentTravel} className='h-11 border rounded bg-[#F6F6F6]' />
                 </div>
                 <div className='mb-6 mt-11 flex flex-col'>
                     <h2 className='text-lg font-semibold mb-2'>Give details about 2 of your parents</h2>
@@ -28,15 +33,15 @@ const StepOne = () => {
                 </div>
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Given Names and Family Name</label>
-                    <input className='h-11 border rounded bg-[#F6F6F6]' />
+                    <input name='parent1GivenNamesandFamilyNames' value={data.parent1GivenNamesandFamilyNames} className='h-11 border rounded bg-[#F6F6F6]' />
                 </div>
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Date of Birth</label>
-                    <input type='date' className='h-11 border rounded bg-[#F6F6F6]' />
+                    <input type='date' name='parent1DateOfBirth' value={data.parent1DateOfBirth} className='h-11 border rounded bg-[#F6F6F6]' />
                 </div>
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Country of Nationality</label>
-                    <select className='h-11 border rounded bg-[#F6F6F6]'>
+                    <select name='parent1Nationality' value={data.parent1Nationality} className='h-11 border rounded bg-[#F6F6F6]'>
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Åland Islands">Åland Islands</option>
                         <option value="Albania">Albania</option>
@@ -285,7 +290,9 @@ const StepOne = () => {
                 </div>
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Have they always had the same Nationality?</label>
-                    <select className='h-11 border rounded bg-[#F6F6F6]'>
+                    <select name='dependentSameNationality'
+                        value={data.dependentSameNationality} 
+                        className='h-11 border rounded bg-[#F6F6F6]'>
                         <option value='yes'>Yes</option>
                         <option value='no'>No</option>
                     </select>
@@ -295,15 +302,19 @@ const StepOne = () => {
                 </div>
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Given Names and Family Name</label>
-                    <input className='h-11 border rounded bg-[#F6F6F6]' />
+                    <input type='text' name='parent2GivenNamesandFamilyNames'
+                        value={data.parent2GivenNamesandFamilyNames}className='h-11 border rounded bg-[#F6F6F6]' />
                 </div>
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Date of Birth</label>
-                    <input type='date' className='h-11 border rounded bg-[#F6F6F6]' />
+                    <input type='date' name='parent2DateofBirth'
+                        value={data.parent2DateofBirth}className='h-11 border rounded bg-[#F6F6F6]' />
                 </div>
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Country of Nationality</label>
-                    <select className='h-11 border rounded bg-[#F6F6F6]'>
+                    <select name='parent2CountryofNationality'
+                        value={data.parent2CountryofNationality}
+                        className='h-11 border rounded bg-[#F6F6F6]'>
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Åland Islands">Åland Islands</option>
                         <option value="Albania">Albania</option>
@@ -552,29 +563,39 @@ const StepOne = () => {
                 </div>
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Have they always had the same Nationality?</label>
-                    <select className='h-11 border rounded bg-[#F6F6F6]'>
+                    <select name='parent2SameNationality'
+                        value={data.parent2SameNationality}
+                        className='h-11 border rounded bg-[#F6F6F6]'>
                         <option value='yes'>Yes</option>
                         <option value='no'>No</option>
                     </select>
                 </div>
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Do you have any family in the UK?</label>
-                    <select className='h-11 border rounded bg-[#F6F6F6]'>
+                    <select name='hasfamilyInUK'
+                        value={data.hasfamilyInUK}
+                        className='h-11 border rounded bg-[#F6F6F6]'>
                         <option value='yes'>Yes</option>
                         <option value='no'>No</option>
                     </select>
                 </div>
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>If "Yes", what's their relationship to you?</label>
-                    <input className='h-11 border rounded bg-[#F6F6F6]' />
+                    <input name='familyRelationship'
+                        value={data.familyRelationship}
+                        className='h-11 border rounded bg-[#F6F6F6]' />
                 </div>
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>State their Given Names and Family Name</label>
-                    <input className='h-11 border rounded bg-[#F6F6F6]' />
+                    <input name='familyName'
+                        value={data.familyName}
+                        className='h-11 border rounded bg-[#F6F6F6]' />
                 </div>
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Their Country of Nationality</label>
-                    <select className='h-11 border rounded bg-[#F6F6F6]'>
+                    <select name='familyNationality'
+                        value={data.familyNationality}
+                        className='h-11 border rounded bg-[#F6F6F6]'>
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Åland Islands">Åland Islands</option>
                         <option value="Albania">Albania</option>
@@ -823,7 +844,9 @@ const StepOne = () => {
                 </div>
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>What Permission did they have to be in the UK?</label>
-                    <select className='h-11 border rounded bg-[#F6F6F6]'>
+                    <select name='familyPermissionToUK'
+                        value={data.familyPermissionToUK}
+                        className='h-11 border rounded bg-[#F6F6F6]'>
                         <option value='temporary'>They have a temporary visa</option>
                         <option value='permanent'>They are in the UK Permanently</option>
                         <option value='no visa'>They do not have a Visa and Not in the UK Permanently</option>
@@ -832,7 +855,9 @@ const StepOne = () => {
                 </div>
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Their Passport Number</label>
-                    <input className='h-11 border rounded bg-[#F6F6F6]' />
+                    <input type='text' name='familyPassportNumber'
+                        value={data.familyPassportNumber}
+                        className='h-11 border rounded bg-[#F6F6F6]' />
                 </div>
             </form>
         </section>

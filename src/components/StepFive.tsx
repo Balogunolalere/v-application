@@ -1,7 +1,23 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+import React, { useState } from 'react';
 
 const StepOne = () => {
+    const [data, setData] = useState({
+        visitFrequency: '',
+        visitedCountries: '',
+        refusedVisa: '',
+        refusedEntry: '',
+        refusedPermission: '',
+        refusedAsylum: '',
+        deported: '',
+        removed: '',
+        requiredToLeave: '',
+        excludedOrBanned: '',
+        details: '',
+        country: '',
+        immigrationProblemDate: '',
+        immigrationProblemDetails: ''
+    });
     return (
         <section className='p-6'>
             <h1 className='text-lg font-bold'>Travelers Details</h1>
@@ -10,7 +26,7 @@ const StepOne = () => {
             <form className='mt-6'>              
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>How many times have you visited the following places in the past 10 years? Australia, Canada, New Zealand, European Economic Area</label>
-                    <select className='h-11 border rounded bg-[#F6F6F6]'>
+                    <select className='h-11 border rounded bg-[#F6F6F6]' name='visitFrequency' value={data.visitFrequency} required>
                         <option value='0'>0</option>
                         <option value='2-5'>2-5 times</option>
                         <option value='5+'>5 or more times</option>
@@ -42,7 +58,7 @@ const StepOne = () => {
                 </div> */}
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Have you been to any other countries (Africa, Asia and Middle-East) in the past 10 years?</label>
-                    <select className='h-11 border rounded bg-[#F6F6F6]'>
+                    <select className='h-11 border rounded bg-[#F6F6F6]' name='visitedCountries' value={data.visitedCountries} required>
                         <option value='yes'>Yes</option>
                         <option value='no'>No</option>
                     </select>
@@ -76,7 +92,7 @@ const StepOne = () => {
                 </div>
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Refused a visa</label>
-                    <select className='h-11 border rounded bg-[#F6F6F6]'>
+                    <select className='h-11 border rounded bg-[#F6F6F6]' name='refusedVisa' value={data.refusedVisa} required>
                         <option value='yes'>Yes</option>
                         <option value='no'>No</option>
                     </select>
@@ -84,7 +100,7 @@ const StepOne = () => {
 
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Refused entry at the border</label>
-                    <select className='h-11 border rounded bg-[#F6F6F6]'>
+                    <select className='h-11 border rounded bg-[#F6F6F6]' name='refusedEntry' value={data.refusedEntry} required>
                         <option value='yes'>Yes</option>
                         <option value='no'>No</option>
                     </select>
@@ -92,7 +108,7 @@ const StepOne = () => {
 
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Refused permission to stay or remain</label>
-                    <select className='h-11 border rounded bg-[#F6F6F6]'>
+                    <select className='h-11 border rounded bg-[#F6F6F6]' name='refusedPermission' value={data.refusedPermission} required>
                         <option value='yes'>Yes</option>
                         <option value='no'>No</option>
                     </select>
@@ -100,7 +116,7 @@ const StepOne = () => {
 
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Refused asylum</label>
-                    <select className='h-11 border rounded bg-[#F6F6F6]'>
+                    <select className='h-11 border rounded bg-[#F6F6F6]' name='refusedAsylum' value={data.refusedAsylum} required>
                         <option value='yes'>Yes</option>
                         <option value='no'>No</option>
                     </select>
@@ -108,7 +124,7 @@ const StepOne = () => {
 
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Deported</label>
-                    <select className='h-11 border rounded bg-[#F6F6F6]'>
+                    <select className='h-11 border rounded bg-[#F6F6F6]' name='deported' value={data.deported} required>
                         <option value='yes'>Yes</option>
                         <option value='no'>No</option>
                     </select>
@@ -116,7 +132,7 @@ const StepOne = () => {
 
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Removed</label>
-                    <select className='h-11 border rounded bg-[#F6F6F6]'>
+                    <select className='h-11 border rounded bg-[#F6F6F6]' name='removed' value={data.removed} required>
                         <option value='yes'>Yes</option>
                         <option value='no'>No</option>
                     </select>
@@ -124,7 +140,7 @@ const StepOne = () => {
 
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Required to leave</label>
-                    <select className='h-11 border rounded bg-[#F6F6F6]'>
+                    <select className='h-11 border rounded bg-[#F6F6F6]' name='requiredToLeave' value={data.requiredToLeave} required>
                         <option value='yes'>Yes</option>
                         <option value='no'>No</option>
                     </select>
@@ -132,7 +148,7 @@ const StepOne = () => {
 
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Excluded or banned from entry</label>
-                    <select className='h-11 border rounded bg-[#F6F6F6]'>
+                    <select className='h-11 border rounded bg-[#F6F6F6]' name='excludedOrBanned' value={data.excludedOrBanned} required>
                         <option value='yes'>Yes</option>
                         <option value='no'>No</option>
                     </select>
@@ -140,7 +156,7 @@ const StepOne = () => {
 
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Give details of what happened </label>
-                    <select className='h-11 border rounded bg-[#F6F6F6]'>
+                    <select className='h-11 border rounded bg-[#F6F6F6]' name='details' value={data.details} required>
                         <option value="refused a visa">Refused a visa</option>
                         <option value="refused entry at the border">Refused entry at the border</option>
                         <option value="refused permission to stay or remain">Refused permission to stay or remain</option>
@@ -154,7 +170,7 @@ const StepOne = () => {
 
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Name of Country</label>
-                    <select className='h-11 border rounded bg-[#F6F6F6]'>
+                    <select className='h-11 border rounded bg-[#F6F6F6]' name='country' value={data.country} required>
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Åland Islands">Åland Islands</option>
                         <option value="Albania">Albania</option>
@@ -403,12 +419,12 @@ const StepOne = () => {
                 </div>
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>When did this immigration problem happen?</label>
-                    <input type='date' className='h-11 border rounded bg-[#F6F6F6]' />
+                    <input type='date' className='h-11 border rounded bg-[#F6F6F6]' name='immigrationProblemDate'  value={data.immigrationProblemDate} />
                 </div>
 
                 <div className='mb-6 flex flex-col'>
                     <label className='text-sm font-semibold mb-2'>Give more details of what happened</label>
-                    <textarea className='h-24 border rounded bg-[#F6F6F6]' />
+                    <textarea className='h-24 border rounded bg-[#F6F6F6]' name='immigrationProblemDetails' value={data.immigrationProblemDetails} />
                 </div>
             </form>
         </section>

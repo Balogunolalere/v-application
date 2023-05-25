@@ -208,12 +208,6 @@ const visaApplicationSchema = new Schema(
         nonPartnerRelationship: {
             type: String
         },
-        nonPartnerName: {
-            type: String
-        },
-        nonPartnerNationality: {
-            type: String
-        },
         hasAddressInUK: {
             type: String,
             enum: ['yes', 'no']
